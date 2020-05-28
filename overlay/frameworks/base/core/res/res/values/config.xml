@@ -617,6 +617,9 @@
      
     <!-- Disable rounded corners on windows to improve graphics performance -->
      <bool name="config_supportsRoundedCornersOnWindows">false</bool>
+     
+    <!-- SBC Dual Channel (SBC HD Audio) -->
+    <bool name="config_enableSBCDualChannelAudio">false</bool>
 
     <!-- The list of components which should be automatically disabled for a specific device. -->
      <string-array name="config_disabledComponents" translatable="false">
