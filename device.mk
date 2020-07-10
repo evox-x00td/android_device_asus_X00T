@@ -124,6 +124,9 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
     
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl
+    
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
@@ -212,10 +215,6 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
     
-# NFC removal for non NFC variant
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/bin/device_check.sh:install/bin/device_check.sh
-    
 # Netutils
 PRODUCT_PACKAGES += \
     libandroid_net \
@@ -300,34 +299,20 @@ PRODUCT_PACKAGES += \
     
 # Ramdisk Scripts
 PRODUCT_PACKAGES += \
-    emmc_prop_init.sh \
     init.class_main.sh \
-    init.crda.sh \
     init.hw.qcom.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.crashdata.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.qti.can.sh \
-    init.qti.fm.sh \
-    init.qti.ims.sh \
-    init.qti.qseecomd.sh \
-    qca6234-service.sh
-    
+    device_check.sh
+
 # Ramdisk rc
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.amt.rc \
     init.amt.target.rc \
     init.msm.usb.configfs.rc \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
@@ -428,7 +413,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/fstman.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/fstman.ini \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
