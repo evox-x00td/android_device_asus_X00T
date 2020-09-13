@@ -54,11 +54,6 @@
 
     <!-- Flag specifying whether VoLTE is available on device -->
      <bool name="config_device_volte_available">true</bool>
-     
-     <!-- Flag specifying whether VT should be available for carrier: independent of
-         carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-    <bool name="config_carrier_vt_available">true</bool>
 
     <!-- Flag specifying whether VT is available on device -->
      <bool name="config_device_vt_available">true</bool>
@@ -600,7 +595,7 @@
      <string name="config_fpsInfoSysNode" translatable="false">/sys/devices/virtual/graphics/fb0/measured_fps</string>
 
     <!-- Specify if the fingerprint hardware support gestures-->
-     <bool name="config_fingerprintSupportsGestures">false</bool>
+     <bool name="config_fingerprintSupportsGestures">true</bool>
 
     <!-- Flashlight on power button -->
      <integer name="config_flashlightProximityTimeout">-1</integer>
@@ -622,17 +617,10 @@
      
     <!-- Disable rounded corners on windows to improve graphics performance -->
      <bool name="config_supportsRoundedCornersOnWindows">false</bool>
-     
-    <!-- SBC Dual Channel (SBC HD Audio) -->
-    <bool name="config_enableSBCDualChannelAudio">false</bool>
 
     <!-- The list of components which should be automatically disabled for a specific device. -->
      <string-array name="config_disabledComponents" translatable="false">
      <item>com.google.android.googlequicksearchbox/com.google.android.hotword.service.HotwordService</item>
      </string-array>
-     
-    <!-- Disable battery health info and ultra power saving -->
-     <bool name="config_supportBatteryHealth">false</bool>
-     <bool name="config_supportUltraPowerSaving">false</bool>
 
 </resources>
