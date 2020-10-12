@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_X00T.mk
+    $(LOCAL_DIR)/rr_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_X00T-userdebug
+    rr_X00T-userdebug
